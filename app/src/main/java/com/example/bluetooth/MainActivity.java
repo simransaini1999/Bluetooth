@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         enable_bt = findViewById(R.id.enable_bt);
-        visible_bt = findViewById(R.id.visible_bt);
         search_bt= findViewById(R.id.search_bt);
         name_bt = findViewById(R.id.name_bt);
         listView = findViewById(R.id.list_view);
@@ -64,16 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        visible_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    Intent getVisible = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-                    startActivityForResult(getVisible, 0);
-                    Toast.makeText(MainActivity.this, "Visible for 2 min", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+
         search_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
