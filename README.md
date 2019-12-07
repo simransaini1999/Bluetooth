@@ -150,4 +150,4 @@ How to work this app:
 
 Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
 ## Reference
-During this project I had referred to Android Developers and a turtorial on [youtube](https://www.youtube.com/watch?v=iFtjox9_zAI) on how to implement bluetooth on an actual device. 
+During this project I had referred to [Android Developers](https://developer.android.com/) and a turtorial on [youtube](https://www.youtube.com/watch?v=iFtjox9_zAI) on how to implement bluetooth on an actual device. 
