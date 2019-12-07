@@ -1,8 +1,8 @@
 ## Bluetooth
 This webpage will be discussed on Bluetooth and will explain on how develop your own Bluetooth android app in android studio. Bluetooth is an android platform which supports the Bluetooth network stack. Network stack allows a device to wirelessly exchange data with other Bluetooth devices. What this app will do is that it will display all the Bluetooth devices your Android phone has connected to in the past or is connected to at the moment as the app is being operated. If your phones Bluetooth is off this app will make sure that is on by having its own Bluetooth on/off switch, so that the no matter if the phone’s Bluetooth is on/off the app will turn on the Bluetooth to be assure that after the other functionalities will run properly. 
 
-## Classes
-The class I will be using is android.bluetoothAdapter. This lets you perform fundamental bluetooth tasks, such as initiate device discovery. It will give you a list of paired devices. 
+## History
+Bluetooth was invented in 1994, but wasn't introduced to android cellphones until the first bluetooth cellphone came out in 2001. After 2001 bluetooth as been perfected over these years whereas now the lattest version of bluetooth on android API is The class I will be using is android.bluetoothAdapter. This lets you perform fundamental bluetooth tasks, such as initiate device discovery. It will give you a list of paired devices. 
 
 ## Motivation
 This project lets the user look at the devices the phone has been paired to in the past. This project can help the user if the device isn't connecting to a Bluetooth device or is glitching, the user can go to this app and see if the phone still remembers that particular Bluetooth device or not. 
@@ -115,14 +115,7 @@ public String getLocalBluetoothName(){  // This function gets the name of the bl
 }
 
 ```
-
 So now after making this, declare the function in the onCreate.
-
-## API Reference
-
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
 ## How to use the application
 Testing this App can be only done by running the code on an actual phone due to it being compatible by a Bluetooth device and having Bluetooth compatibility. It can not be running on the launcher phone provided by the android studio because that phone is not compatible with Bluetooth and itself is not possible to connect to any Bluetooth devices. 
 How to work this app: 
