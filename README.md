@@ -1,17 +1,11 @@
 ## Bluetooth
-The project is Bluetooth. It is an android platform which supports the bluetooth network stack. Network stack allows a device to wirelessly exchange data with other bluetooth devices. What this project will do is that it will display all the bluetooth devices your phone remebered it was connected too. 
+This webpage will be discussed on Bluetooth and will explain on how develop your own Bluetooth android app in android studio. Bluetooth is an android platform which supports the Bluetooth network stack. Network stack allows a device to wirelessly exchange data with other Bluetooth devices. What this app will do is that it will display all the Bluetooth devices your Android phone has connected to in the past or is connected to at the moment as the app is being operated. If your phones Bluetooth is off this app will make sure that is on by having its own Bluetooth on/off switch, so that the no matter if the phone’s Bluetooth is on/off the app will turn on the Bluetooth to be assure that after the other functionalities will run properly. 
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
-
-## Code Example
-The library I will be using is android.bluetoothAdapter. this lets you perform fundamental bluetooth tasks, such as initiate device discovery. It will give you a list of paired devices. 
-
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+## Classes
+The class I will be using is android.bluetoothAdapter. This lets you perform fundamental bluetooth tasks, such as initiate device discovery. It will give you a list of paired devices. 
 
 ## Motivation
 This project lets the user look at the devices the phone has been paired to in the past. This project can help the user if the device isn't connecting to a Bluetooth device or is glitching, the user can go to this app and see if the phone still remembers that particular Bluetooth device or not. 
-
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 
 ## Installation
 How to get this project is you will have to install android studio, then after installing start new project, Empty Activity, create a name for the application, choose a package name, choose the language as JAVA then make sure you also choose the minimum API level at 21 so most phones will be compatible with your app and click finish.  
