@@ -16,12 +16,6 @@ The first thing after setting up the Bluetooth project you will have to set up t
         android:id="@+id/enable_bt"
         android:text="Enable"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/visible_bt"
-        android:text="Visible"
-        android:layout_alignParentRight="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,7 +52,6 @@ After setting all this the next thing you need to move on to is the MainActivity
 ```
 Next you declare the find view by id for the layout actions:
 ``` enable_bt = findViewById(R.id.enable_bt);
-visible_bt = findViewById(R.id.visible_bt);
 search_bt= findViewById(R.id.search_bt);
 name_bt = findViewById(R.id.name_bt);
 listView = findViewById(R.id.list_view);
@@ -69,7 +62,7 @@ Now use the library android.bluetoothAdapter so the device can find the paired B
 BA = BluetoothAdapter.getDefaultAdapter();
 ```
 
-After this set the checkboxes and the buttons and lists. In this when the user clicks on the enable checkbox, what it does is that it enables or disables the app from checking the list of Bluetooth in the phone. When the user Visible button is clicked it means that it is searching for the devices for 2 minutes and will display when the list is clicked, in this case the list is the search button which is the Bluetooth picture also a button. When the List is clicked it searches and displays the connected Bluetooth devices to the phone.
+After this set the checkboxes and the buttons and lists. In this when the user clicks on the enable checkbox, what it does is that it enables or disables the app from checking the list of Bluetooth in the phone. List is the search button with the Bluetooth picture, also a button. When the List is clicked it creats an array list for the names of the bluetooth devices to be put in after the getLocalBluetoothName method is excuted. After there is data put into the list it will displays the names of the connected Bluetooth devices to the phone.
 ```
 enable_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
         @Override
@@ -84,16 +77,7 @@ enable_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(
             }
         }
     });
-    visible_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            if(isChecked){
-                Intent getVisible = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-                startActivityForResult(getVisible, 0);
-                Toast.makeText(MainActivity.this, "Visible for 2 min", Toast.LENGTH_SHORT).show();
-            }
-        }
-    });
+   
     search_bt.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -101,7 +85,7 @@ enable_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(
         }
     });
 }
-private void list(){
+private void list(){   // this creates the list for the names of bluetooth devces 
     pairedDevices = BA.getBondedDevices();
     ArrayList list = new ArrayList();
 
@@ -118,7 +102,7 @@ private void list(){
 
 Lastly, we will have to create a method so that it can get the local Bluetooth name. This will be where after the search button being pressed and when the Bluetooth devices are displayed. For the Bluetooth devices to be displayed we will need to make a method to get the local Bluetooth name. 
 ```
-public String getLocalBluetoothName(){
+public String getLocalBluetoothName(){  // This function gets the name of the bluetooth devices the phone is connected too. 
         if(BA == null){
             BA = BluetoothAdapter.getDefaultAdapter();
         }
@@ -139,15 +123,12 @@ So now after making this, declare the function in the onCreate.
 
 Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Testing the APP
+## How to use the application
 Testing this App can be only done by running the code on an actual phone due to it being compatible by a Bluetooth device and having Bluetooth compatibility. It can not be running on the launcher phone provided by the android studio because that phone is not compatible with Bluetooth and itself is not possible to connect to any Bluetooth devices. 
 How to work this app: 
 1.	Click enable which will turn on the Bluetooth
-2.	Click visible which will allow your phone to be visible to other devices for 120 seconds 
-3.	Then click the Bluetooth button which will display the Bluetooth devices that are connected to your phone. 
-4.	Also the app will display the phones name(aka the name you gave your phone) on the app indicating from to which device are the           all the Bluetooth devices displaying in a list are connected too. 
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+2.	Then click the Bluetooth button which will display the Bluetooth devices that are connected to your phone. 
+3.	Also the app will display the phones name(aka the name you gave your phone) on the app indicating from to which device are the           all the Bluetooth devices displaying in a list are connected too. 
+ 
 ## Reference
 During this project I had referred to [Android Developers](https://developer.android.com/) and a turtorial on [youtube](https://www.youtube.com/watch?v=iFtjox9_zAI) on how to implement bluetooth on an actual device. 
