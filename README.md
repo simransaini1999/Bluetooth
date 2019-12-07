@@ -138,19 +138,20 @@ public String getLocalBluetoothName(){
 
 ```
 
-So now after making this, declare the function in the 
-
-
-Provide code examples and explanations of how to get the project.
+So now after making this, declare the function in the onCreate.
 
 ## API Reference
 
+
 Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Tests
-
-Describe and show how to run the tests with code examples.
-
+## Testing the APP
+Testing this App can be only done by running the code on an actual phone due to it being compatible by a Bluetooth device and having Bluetooth compatibility. It can not be running on the launcher phone provided by the android studio because that phone is not compatible with Bluetooth and itself is not possible to connect to any Bluetooth devices. 
+How to work this app: 
+1.	Click enable which will turn on the Bluetooth
+2.	Click visible which will allow your phone to be visible to other devices for 120 seconds 
+3.	Then click the Bluetooth button which will display the Bluetooth devices that are connected to your phone. 
+4.	Also the app will display the phones name(aka the name you gave your phone) on the app indicating from to which device are the           all the Bluetooth devices displaying in a list are connected too. 
 ## Contributors
 
 Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
