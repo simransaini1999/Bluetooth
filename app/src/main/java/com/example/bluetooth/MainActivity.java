@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         if(BA.isEnabled()){
             enable_bt.setChecked(true);
         }
-        enable_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        enable_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { //this enables the bluetooth on the phone
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (!isChecked){
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void list(){
+    private void list(){ // this creates the list for the names of bluetooth devices
         pairedDevices = BA.getBondedDevices();
         ArrayList list = new ArrayList();
 
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,list);
         listView.setAdapter((adapter));
     }
-    public String getLocalBluetoothName(){
+    public String getLocalBluetoothName(){  // This function gets the name of the bluetooth devices the phone is connected too.
         if(BA == null){
             BA = BluetoothAdapter.getDefaultAdapter();
         }
