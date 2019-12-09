@@ -1,5 +1,5 @@
 ## Bluetooth
-This webpage will be discussed on Bluetooth and will explain on how develop your own Bluetooth android app in android studio. Bluetooth is an android platform which supports the Bluetooth network stack. Network stack allows a device to wirelessly exchange data with other Bluetooth devices. What this app will do is that it will display all the Bluetooth devices your Android phone has connected to in the past or is connected to at the moment as the app is being operated. If your phones Bluetooth is off this app will make sure that is on by having its own Bluetooth on/off switch, so that the no matter if the phone’s Bluetooth is on/off the app will turn on the Bluetooth to be assure that after the other functionalities will run properly. 
+This webpage will be discussed on Bluetooth and will explain on how develop your own Bluetooth android app in android studio. Bluetooth is an android platform which supports the Bluetooth network stack. Network stack allows a device to wirelessly exchange data with other Bluetooth devices. What this app will do is that it will display all the Bluetooth devices your Android phone has connected to in the past or is connected to at the moment as the app is being operated. If your phones Bluetooth is off this app will make sure that is on by having its own Bluetooth on/off switch, so that the no matter if the phone’s Bluetooth is on/off the app will turn on the Bluetooth to be assure that after the other functionalities will run properly.  
 
 ## History
 Bluetooth was invented in 1994, but wasn't introduced to android cellphones until the first bluetooth cellphone came out in 2001. After 2001 bluetooth as been perfected over these years whereas now the lattest version of bluetooth on android API is The class I will be using is android.bluetoothAdapter. This lets you perform fundamental bluetooth tasks, such as initiate device discovery. It will give you a list of paired devices. 
@@ -88,7 +88,7 @@ enable_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(
         }
     });
 }
-private void list(){   // this creates the list for the names of bluetooth devces 
+private void list(){   // this creates the list for the names of bluetooth devices
     pairedDevices = BA.getBondedDevices();
     ArrayList list = new ArrayList();
 
@@ -120,7 +120,7 @@ public String getLocalBluetoothName(){  // This function gets the name of the bl
 ```
 So now after making this, declare the function in the onCreate.
 ## How to use the application
-Testing this App can be only done by running the code on an actual phone due to it being compatible by a Bluetooth device and having Bluetooth compatibility. It can not be running on the launcher phone provided by the android studio because that phone is not compatible with Bluetooth and itself is not possible to connect to any Bluetooth devices. 
+Testing this App can be only done by running the code on an actual phone due to it being compatible by a Bluetooth device and having Bluetooth compatibility. The app can not run on the launcher phone provided by the android studio because that phone is not compatible with Bluetooth and itself is not possible to connect to any Bluetooth devices, therefore this phone needs to run on an acutal phone. 
 How to work this app: 
 1.	Click enable which will turn on the Bluetooth
 2.	Then click the Bluetooth button which will display the Bluetooth devices that are connected to your phone. 
