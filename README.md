@@ -104,7 +104,7 @@ private void list(){   // this creates the list for the names of bluetooth devce
 
 
 Lastly, we will have to create a method so that it can get the local Bluetooth name. This will be where after the search button being pressed and when the Bluetooth devices are displayed. For the Bluetooth devices to be displayed we will need to make a method to get the local Bluetooth name. 
-```
+```java
 public String getLocalBluetoothName(){  // This function gets the name of the bluetooth devices the phone is connected too. 
         if(BA == null){
             BA = BluetoothAdapter.getDefaultAdapter();
