@@ -10,7 +10,8 @@ This project lets the user look at the devices the phone has been paired to in t
 ## Installation
 How to get this project is you will have to install android studio, then after installing start new project, Empty Activity, create a name for the application, choose a package name, choose the language as JAVA then make sure you also choose the minimum API level at 21 so most phones will be compatible with your app and click finish.  
 The first thing after setting up the Bluetooth project you will have to set up the layout which with checkboxes and text views.
-``` <CheckBox
+```XML
+<CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/enable_bt"
