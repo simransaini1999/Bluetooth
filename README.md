@@ -45,26 +45,28 @@ The first thing after setting up the Bluetooth project you will have to set up t
 ```
 This is just an example of setting up the checkboxes and text views. 
 After setting all this the next thing you need to move on to is the MainActivity where you will first declare the checkboxes,Imageview,Text view, and List View before the onCreate. 
-```public class MainActivity extends AppCompatActivity {
+```java
+public class MainActivity extends AppCompatActivity {
     CheckBox enable_bt,visible_bt;
     ImageView search_bt;
     TextView name_bt;
     ListView listView;
 ```
 Next you declare the find view by id for the layout actions:
-``` enable_bt = findViewById(R.id.enable_bt);
+``` java
+enable_bt = findViewById(R.id.enable_bt);
 search_bt= findViewById(R.id.search_bt);
 name_bt = findViewById(R.id.name_bt);
 listView = findViewById(R.id.list_view);
 ```
 
 Now use the library android.bluetoothAdapter so the device can find the paired Bluetooth devices
-```
+```java
 BA = BluetoothAdapter.getDefaultAdapter();
 ```
 
 After this set the checkboxes and the buttons and lists. In this when the user clicks on the enable checkbox, what it does is that it enables or disables the app from checking the list of Bluetooth in the phone. List is the search button with the Bluetooth picture, also a button. When the List is clicked it creats an array list for the names of the bluetooth devices to be put in after the getLocalBluetoothName method is excuted. After there is data put into the list it will displays the names of the connected Bluetooth devices to the phone.
-```
+```java
 enable_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
